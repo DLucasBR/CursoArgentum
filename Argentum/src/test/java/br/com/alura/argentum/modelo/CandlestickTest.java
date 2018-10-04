@@ -8,6 +8,7 @@ import org.junit.Test;
 
 class CandlestickTest {
 
+	@SuppressWarnings("unused")
 	@Test(expected = IllegalArgumentException.class)
 	public void maximoNaoDeveSerMenorDoQueMinimo() {
 		CandleBuilder builder = new CandleBuilder();
