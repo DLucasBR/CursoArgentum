@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import org.junit.Test;
 
+import com.thoughtworks.xstream.XStream;
 
 public class NegociacaoTest {
 	
@@ -25,7 +26,7 @@ public class NegociacaoTest {
 	
 	@Test
     public void testaXStream() {
-        Xstream stream;
+        XStream stream;
     }
 	
 }
