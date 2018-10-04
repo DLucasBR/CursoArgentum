@@ -1,9 +1,10 @@
 package br.com.alura.argentum.modelo;
 
+import static org.junit.Assert.assertTrue;
+
 import java.time.LocalDateTime;
 
-import static org.junit.Assert.assertTrue;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class CandlestickTest {
 

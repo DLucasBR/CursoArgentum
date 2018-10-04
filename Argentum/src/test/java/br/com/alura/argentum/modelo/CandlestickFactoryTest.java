@@ -1,12 +1,13 @@
 package br.com.alura.argentum.modelo;
 
+import static org.junit.Assert.assertEquals;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class CandlestickFactoryTest {
 
