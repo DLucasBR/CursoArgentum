@@ -4,23 +4,26 @@ import java.time.LocalDateTime;
 
 public final class Negociacao {
 
-	/*Classes final nao podem ser herdadas, logo nao podem ter seus metodos sobrescritoss*/
-	
+	/*
+	 * Classes final nao podem ser herdadas, logo nao podem ter seus metodos
+	 * sobrescritoss
+	 */
+
 	private final double preco;
 	private final int quantidade;
 	private final LocalDateTime data;
 
 	public Negociacao(double preco, int quantidade, LocalDateTime data) {
-		
-		if(preco < 0)
+
+		if (preco < 0)
 			throw new IllegalArgumentException("O preco nao pode ser negativo");
-		
-		if(data == null)
+
+		if (data == null)
 			throw new IllegalArgumentException("A data nao pode ser nula");
-		
-		if(quantidade < 1)
+
+		if (quantidade < 1)
 			throw new IllegalArgumentException("A quantidade deve ser um valor positivo");
-		
+
 		this.preco = preco;
 		this.quantidade = quantidade;
 		this.data = data;
@@ -37,7 +40,7 @@ public final class Negociacao {
 	public LocalDateTime getData() {
 		return data;
 	}
-	
+
 	public double getVolume() {
 		return this.preco * this.quantidade;
 	}
@@ -75,5 +78,9 @@ public final class Negociacao {
 		return true;
 	}
 
+	public boolean isMesmoDia(LocalDateTime outraData) {
+		return this.data.equals(outraData) || (this.data.getDayOfMonth() == outraData.getDayOfMonth()
+				&& this.data.getMonth() == outraData.getMonth() && this.data.getYear() == outraData.getYear());
+	}
 
 }
